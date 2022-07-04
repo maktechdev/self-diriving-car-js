@@ -4,11 +4,27 @@ class Car {
         this.y = y;
         this.width = width;
         this.height = height;
-        console.log("a new car made")
+        this.controls = new Controls();
+
     }
 
-    draw() {
-        console.log("draw car")
+    update() {
+        if (this.controls.forward) {
+            this.y -= 2;
+        }
+        if (this.controls.reverse) {
+            this.y += 2;
+        }
+    }
+
+    draw(ctx) {
+        ctx.rect(
+            this.x - this.width / 2,
+            this.y - this.height / 2,
+            this.width,
+            this.height
+        );
+        ctx.fill();
     }
 
 }
