@@ -1,20 +1,32 @@
 class Car {
     constructor(x, y, width, height) {
         this.x = x;
-        this.y = y;
+        this.y = window.innerHeight;
         this.width = width;
         this.height = height;
         this.controls = new Controls();
+        this.speed = 0;
+        this.maxSpeed = 15;
+        this.acceleration = 0.03;
+
 
     }
 
     update() {
         if (this.controls.forward) {
-            this.y -= 2;
+            this.speed += this.acceleration;
+            this.y -= this.speed;
+            if (this.speed >= this.maxSpeed) {
+                this.speed = this.maxSpeed;
+            }
+            console.table(this.speed);
         }
         if (this.controls.reverse) {
-            this.y += 2;
+            this.y += 1;
+            console.table(this.speed);
         }
+
+        
     }
 
     draw(ctx) {

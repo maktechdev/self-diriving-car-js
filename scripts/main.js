@@ -1,7 +1,9 @@
 const canvas = document.getElementById("myCanvas");
-console.log(canvas);
- 
+const speedDisplay = document.getElementById("speedDisplay");
+
+
 canvas.width = 200; 
+
 
 
 const ctx = canvas.getContext("2d");
@@ -15,4 +17,5 @@ function animate() {
     canvas.height = window.innerHeight;   
     car.draw(ctx);
     requestAnimationFrame(animate);
+    speedDisplay.innerHTML = car.speed;
 }

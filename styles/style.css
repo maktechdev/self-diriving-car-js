@@ -5,13 +5,28 @@
 }
 
 body {
-    background-color: #006600;
+    background-color: #1da1f2;
     text-align: center;
     overflow: hidden;
+    position: relative;
 
 }
 
+.dataDisplay{
+    width: 250px;
+    height: 100px;
+    background-color: #14171a;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: aliceblue;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
 #myCanvas{
-    background-color: dimgray;
+    background-color: #657786;
 
 }
