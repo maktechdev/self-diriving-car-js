@@ -9,10 +9,9 @@ body {
     text-align: center;
     overflow: hidden;
     position: relative;
-
 }
 
-.dataDisplay{
+div.dataDisplay{
     width: 250px;
     height: 100px;
     background-color: #14171a;
@@ -26,7 +25,6 @@ body {
     border-radius: 5px;
 }
 
-#myCanvas{
+canvas#myCanvas{
     background-color: #657786;
-
 }
